@@ -1,0 +1,76 @@
+<app-headerbeforelog></app-headerbeforelog>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <section class="container">
+      <header style="color: white;">Customer Registration Form</header>
+      <form #RegistrationForm="ngForm" class="form" (ngSubmit)="registerbut()" >
+          <div>
+            <div class="input-box">
+                <div class="form-group">
+                  <label>User Name</label>
+                  <small [class.text-danger]>{{message}}</small>
+                  <input type="text" placeholder="Enter full name" required name="username" class="form-control"
+                   [(ngModel)]="reguservalues.username"  #username="ngModel" pattern="[A-Za-z ]{4,13}"  
+                   [class.is-invalid]="username.invalid && username.touched">
+                   <small class="text-danger" [class.d-none]="username.valid || username.untouched">username is Required!!</small>
+                </div>
+            </div>
+    
+            <div class="input-box">
+              <label>Email Id</label>
+              <input type="email" placeholder="Enter Your Email" required  name="emailid" 
+              #emailid="ngModel" class="form-control" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              [(ngModel)]="reguservalues.emailid"
+              [class.is-invalid]="emailid.invalid && emailid.touched">
+                   
+              <div *ngIf="emailid.errors && (emailid.invalid && emailid.touched)">
+                <small class="text-danger"  *ngIf="emailid.errors?.['required']" >EmailId is Not Accepted!!!</small>
+                <small class="text-danger" *ngIf="emailid.errors?.['pattern']"> EmailId is Not Valid </small>
+              </div>
+            </div>
+    
+            <div class="column">
+              <div class="input-box">
+                <label>Phone Number</label>
+                <input type="number" placeholder="Enter phone number" required  name="phonenumber" #phonenumber="ngModel"
+                [(ngModel)]="reguservalues.phno"  pattern="[6-9]{1}[0-9]{9}" class="form-control" 
+                [class.is-invalid]="phonenumber.invalid && phonenumber.touched">
+                <small class="text-danger" [class.d-none]="phonenumber.valid || phonenumber.untouched">phonenumber is Not valid!!</small>
+              </div>
+            </div>
+            <div class="column">
+              <div class="input-box">
+                  <label>Password</label>
+                  <input type="password" placeholder="Enter Your Password" required  name="password" 
+                   #password="ngModel" class="form-control" pattern="[0-9a-zA-Z_@#!$%^&*()?]{4,15}"
+                   [(ngModel)]="reguservalues.password"
+                   [class.is-invalid]="password.invalid && password.touched">
+                   <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is Required!!</small>
+                </div> 
+            </div>
+    
+            <div class="column">
+              <div class="input-box">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Enter password again" required  name="confirmpassword"
+                 #confirmpassword="ngModel" (ngModel)="reguservalues.password"
+                 [class.is-invalid]="confirmpassword.invalid && confirmpassword.touched">
+                 <small class="text-danger" [class.d-none]="(confirmpassword.value==password.value)">Password & ConfirmPassword Must Be same is!!</small>
+              </div>
+            </div>
+          <button type="submit" [disabled]="RegistrationForm.form.invalid">Register here</button>
+          <br>
+          <button style="width: 50px;height: 25px; background-color: blanchedalmond; color: black; border: 1px solid black;" type="reset" >Reset</button>
+        </div>
+        <br>
+        <small style="margin-left: 400px;" class="regisnav" routerLink="/loginpage">Already an Existing User? Login here </small>
+      </form>
+    </section>
+  </body>
+</html>

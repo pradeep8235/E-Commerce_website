@@ -1,0 +1,118 @@
+<app-headerafterlogin></app-headerafterlogin>
+
+<router-outlet></router-outlet>
+<br>
+<br>
+<br>
+<h3 style="background-color: black;color: white; text-align: center;">Shirts for Men</h3>
+<main>
+    
+    <section>
+        <h2>Featured Shirts</h2>
+        <section class="product">
+          <div class="container text-center">
+              <div class="row" >
+                  <div class="col-md-3" *ngFor="let prod of productArray ">
+                      <div class="box">
+                        <span style="background-color: blue; color: white; margin-left: 200px;" >{{prod.rating}}</span>
+                          <div class="product_image">
+                            <img src="{{prod.img}}" alt="P1"/>
+                          </div>
+                          <div class="content">
+                              <h5>{{prod.productname}}</h5>
+                              <h6><b>₹{{prod.amt}}</b></h6>
+                              <button type="button" class="btn" (click)="plus(prod)"><i class="fa fa-plus"></i></button>
+                              <span>{{prod.qnt}}</span>
+                              <button type="button" class="btn" (click)="minus(prod)"><i class="fa fa-minus"></i></button>
+                          </div>
+                          <button type="button" class="cart_btn" (click)="addcart(prod)">Add to cart</button>
+                      </div>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </section>
+          
+
+          <!-- <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/x/v/e/l-all-rbcropn-sky-one-nb-nicky-boy-original-imagkq6hgg5gqsep.jpeg?q=70" alt="Product 1">
+              <h3>Jack & Jones</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/r/b/u/s-2726-deepolive-1-s-jockey-original-imagp39xy8xhunqj.jpeg?q=70  " alt="Product 1">
+              <h3>HighLander</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/2/c/u/xl-11846958-hrx-by-hrithik-roshan-original-imafv3cgwdteczf3-bb.jpeg?q=70" alt="Product 1">
+              <h3>BlackBerry</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/n/1/j/m-no-bomjf233sl44-1080au-bd-bene-kleed-original-imagzukanxzwdxjg.jpeg?q=70" alt="Product 1">
+              <h3>Puma One8</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/832/832/kjhgzgw0-0/jacket/c/5/f/m-hljk000458-highlander-original-imafzfh2bsmeyw2m.jpeg?q=70  " alt="Product 1">
+              <h3>VTEXX</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/2000/2000/xif0q/jacket/c/u/f/m-mnt-7024-montrez-original-imag5hb9hqcc4qyy-bb.jpeg?q=70" alt="Product 1">
+              <h3>Duke</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/961/961/xif0q/shirt/o/v/g/m-style-men-s-shirt-texrok-original-imaghf7rpgrndgr7.jpeg?q=70" alt="Product 1">
+              <h3>Virtue</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/460/460/xif0q/shirt/b/z/2/40-classy-greenflair-original-imagk5fynzqfpuzh.jpeg?q=70" alt="Product 1">
+              <h3>Metal</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/2000/2000/xif0q/jacket/x/h/p/xl-nmnt-7004-montrez-original-imag5t3nfpbqhgrx-bb.jpeg?q=70" alt="Product 1">
+              <h3>Kibit</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/1000/1000/l1l1rww0/t-shirt/f/2/3/m-man-325-white-lime-original-imagd4ahns3kwraz.jpeg?q=70" alt="Product 1">
+              <h3>I-VOC</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div>
+
+          <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/600/600/khjgeq80-0/t-shirt/i/9/u/l-bombr-stylage-original-imafxjgdztgfh7j8.jpeg?q=70" alt="Product 1">
+              <h3>Foomer</h3>
+              <p>₹1500</p>
+              <button>Add to Cart</button>
+          </div> -->
+
+ </section>
+</main>
+<footer style="background-color: black; color:white; text-align: center;position:relative;">
+    <p>&copy; 2023 My Store. All rights reserved.</p>
+</footer>

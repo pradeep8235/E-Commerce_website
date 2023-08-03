@@ -1,0 +1,23 @@
+<app-admindashboard></app-admindashboard>
+
+<form class="col-md-4 offset-md-4">
+    <label for="name">Name</label>
+    <input type="text" class="form-control"  placeholder="Product Name">
+  
+    <label for="author">Price</label>
+    <input type="number" class="form-control"  placeholder="Product price" >
+  
+    <label for="author">Description</label>
+    <input type="text" class="form-control"  placeholder="Product Details"  >
+
+    <label for="author">Rating</label>
+    <input type="text" class="form-control"  placeholder="Product Rating"  >
+  
+    <div class="form-group">
+      <br>
+      <input type="file" (change)="onFileChanged($event)">
+      <img [src]="imgURL" height="200" width="200">
+    </div>
+    <br><br>
+    <button type="button" class="btn btn-success" (click)="saveBook()">Done</button>
+  </form>

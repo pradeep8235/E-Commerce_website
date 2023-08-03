@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-top ">
+      <div class="container">
+        <a class="navbar-brand fs-2 fw-bold " routerLink="/home"><i class="fa fa-cart-shopping fs-2" 
+            style="color: #f54242;"></i><span>PMart</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fw-semibold text-uppercase  me-1 " routerLink="/home"
+                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" routerLink="shoes">SHOES</a></li>
+                <li><a class="dropdown-item" routerLink="shirts">SHIRTS</a></li>
+                <li><a class="dropdown-item" routerLink="pants">PANTS</a></li>
+                <li><a class="dropdown-item" routerLink="watches">WATCHES</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-semibold text-uppercase text-black  me-1" routerLink="contactinfo">Contact us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" ><i class="fa fa-search fs-5"
+                 style="color: black;"></i> </a>
+              </li>
+            
+              <div class="cart_icon" routerLink="cart">
+                <a class="nav-link" ><i class="fa fa-shopping-cart"></i></a>
+                <div class="cart_value">
+                   {{cartItem}}
+                </div>
+            </div>
+
+          </ul> 
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <router-outlet></router-outlet>
