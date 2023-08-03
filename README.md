@@ -1,10 +1,11 @@
-# AnudipFrontend
+# E-Commerce Using Angular + Spring Boot + MySQL 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
 # PREVIEW of E-Commerce Website 
 
-https://github.com/pradeep8235/E-Commerce_website/assets/97385845/e6fd9fa9-1cba-400e-8ad0-0206faa07b5c
+https://github.com/pradeep8235/E-Commerce_website/assets/97385845/290e4288-74d6-4eb1-8d98-e61279288bbe
+
 
 ## Development server
 
