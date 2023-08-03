@@ -2,12 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
-# PREVIEW
+# PREVIEW of E-Commerce Website 
 
-
-https://github.com/pradeep8235/E-Commerce_website/assets/97385845/cb1cf7a7-f4ed-4caf-89af-eb42c7727f89
-
-
+https://github.com/pradeep8235/E-Commerce_website/assets/97385845/e6fd9fa9-1cba-400e-8ad0-0206faa07b5c
 
 ## Development server
 
